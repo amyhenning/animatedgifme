@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["amyhenning"]
   spec.email         = ["henning.amy@gmail.com"]
 
-  spec.summary       = %q{First gem!}
+  spec.summary       = %q{A Ruby gem for http://animatedgif.me}
   spec.description   = %q{This gem was created following a tutorial on GoRails.com}
   spec.homepage      = "https://github.com/amyhenning/animatedgifme"
   spec.license       = "MIT"
@@ -40,5 +40,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
-  spec.add_dependency "httparty", "0.13.7"
+  spec.add_dependency "httparty", "~> 0.13.7"
 end

@@ -1,4 +1,4 @@
-require "animatedgifme/version"
+# require "animatedgifme/version"
 require "httparty"
 
 module Animatedgifme
@@ -6,16 +6,18 @@ module Animatedgifme
 	base_uri "animatedgif.me"
 
 	def self.find(id)
-		get("/gifs/#{id}.json")
+		retrieve_url get("/gifs/#{id}.json")
 	end
 
 	def self.tagged(tag)
+		retrieve_url get("/#{tag}.json")
 	end
 
 	def self.random(tag)
+		tagged(tag)
+	end
+
+	def self.retrieve_url(response)
+		response.parsed_response["url"]
 	end
 end
-
-Animatedgifme.find(768)
-# Animatedgifme.tagged("cat")
-# Animatedgifme.random("cat")
